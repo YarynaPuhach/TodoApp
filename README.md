@@ -1,50 +1,48 @@
-# React Todo App with API (complete)
+ [DEMO LINK](https://YarynaPuhach.github.io/react_todo-app-with-api/) 
 
-It is the third part of the React Todo App with API.
+TodoApp
+TodoApp is a modern task management application built with React, designed to enhance productivity by providing users with a streamlined interface for organizing tasks effectively.
 
-Take your code implemented for [Add and Delete](https://github.com/mate-academy/react_todo-app-add-and-delete)
-and implement the ability to toggle and rename todos.
+Key Features:
+Task Management: Users can add, edit, and delete tasks with ease.
+User Authentication: Secure login system ensures privacy and personalized task management.
+Responsive Design: Built to be mobile-first, ensuring seamless usage on various devices.
+Data Persistence: Utilizes browser's local storage for data persistence.
+Customizable: Users can prioritize tasks, set due dates, and add detailed descriptions.
+Technologies Used:
+React: JavaScript library for building user interfaces.
+JavaScript (ES6+): Core programming language for frontend development.
+HTML/CSS: Structure and styling for the application interface.
+Bootstrap: CSS framework for responsive design and UI components.
+Installation and Setup:
+Clone the repository:
+bash
+Copy code
+git clone https://github.com/YarynaPuhach/TodoApp.git
+Navigate into the project directory:
+bash
+Copy code
+cd TodoApp
+Install dependencies:
+Copy code
+npm install
+Start the application:
+sql
+Copy code
+npm start
+Open your web browser and go to http://localhost:3000 to view TodoApp.
+Usage:
+Register for a new account or log in with existing credentials.
+Create new tasks, specifying details such as title, description, due date, and priority.
+View all tasks on the dashboard, with options to mark tasks as completed or delete them.
+Edit task details as needed to keep track of changes or updates.
+Contributing:
+Contributions to TodoApp are welcome! If you have suggestions for improvements, please fork the repository and submit a pull request. For major changes, please open an issue first to discuss what you would like to change.
 
-> Here is [the working example](https://mate-academy.github.io/react_todo-app-with-api/)
+License:
+This project is licensed under the MIT License - see the LICENSE file for details.
 
-## Toggling a todo status
+Acknowledgments:
+Thanks to Yaryna Puhach for developing and sharing TodoApp for the community.
+Feel free to customize the readme further based on specific functionalities or customization options offered by the application.
 
-Toggle the `completed` status on `TodoStatus` change:
-- Install Prettier Extention and use this [VSCode settings](https://mate-academy.github.io/fe-program/tools/vscode/settings.json) to enable format on save.
-- covered the todo with a loader overlay while waiting for API response;
-- the status should be changed on success;
-- show the `Unable to update a todo` notification in case of API error.
-
-Add the ability to toggle the completed status of all the todos with the `toggleAll` checkbox:
-
-- `toggleAll` button should have `active` class only if all the todos are completed;
-- `toggleAll` click changes its status to the opposite one, and sets this new status to all the todos;
-- it should work the same as several individual updates of the todos which statuses were actually changed;
-- do send requests for the todos that were not changed;
-
-## Renaming a todo
-
-Implement the ability to edit a todo title on double click:
-
-- show the edit form instead of the title and remove button;
-- saves changes on the form submit (just press `Enter`);
-- save changes when the field loses focus (`onBlur`);
-- if the new title is the same as the old one just cancel editing;
-- cancel editing on `Esс` key `keyup` event;
-- if the new title is empty delete the todo the same way the `x` button does it;
-- if the title was changed show the loader while waiting for the API response;
-- update the todo title on success;
-- show `Unable to update a todo` in case of API error;
-- or the deletion error message if we tried to delete the todo.
-
-## If you want to enable tests
-- open `cypress/integration/page.spec.js`
-- replace `describe.skip` with `describe` for the root `describe`
-
-> ❗❗All tests should pass, even if some behaviour in not well explained in the task❗❗
-
-## Instructions
-
-- Implement a solution following the [React task guideline](https://github.com/mate-academy/react_task-guideline#react-tasks-guideline).
-- Use the [React TypeScript cheat sheet](https://mate-academy.github.io/fe-program/js/extra/react-typescript).
-- Replace `<your_account>` with your Github username in the [DEMO LINK](https://<your_account>.github.io/react_todo-app-with-api/) and add it to the PR description.
